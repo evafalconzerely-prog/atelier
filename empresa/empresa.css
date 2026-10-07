@@ -1,0 +1,614 @@
+:root {
+  --blue: #3b50cf;
+  --orange: #fd7c00;
+  --green: #089008;
+  --yellow: #ffe401;
+  --magenta: #f126f0;
+  --gray: #919191;
+  --ink: #20232a;
+  --paper: #fffdf8;
+  --soft: #f4f5fb;
+  --line: #e7e7ec;
+  --white: #ffffff;
+  --shadow-soft: 0 10px 30px rgba(32, 35, 42, 0.06);
+  --shadow-hover: 0 20px 40px rgba(59, 80, 207, 0.16);
+  --radius: 20px;
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mod-empresa {
+  color: var(--ink);
+  background-color: var(--paper);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+.mod-empresa .container {
+  width: min(1140px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* ==========================================================
+   HERO CON ONDAS Y FOTO ÚNICA (PALETA ORIGINAL)
+   ========================================================== */
+.mod-empresa .hero {
+  padding: 70px 0 0;
+  position: relative;
+  background: radial-gradient(circle at 50% 0%, #ffffff 0%, var(--paper) 70%);
+}
+
+.mod-empresa .hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.mod-empresa .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--blue);
+  box-shadow: var(--shadow-soft);
+}
+
+.mod-empresa .title-main {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.12;
+  margin: 18px 0;
+  font-weight: 800;
+}
+
+.mod-empresa .gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--blue),
+    var(--magenta),
+    var(--orange)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mod-empresa .lead {
+  font-size: 17px;
+  color: #5f626b;
+  margin-bottom: 28px;
+}
+
+/* ONDAS EN EL HERO */
+.mod-empresa .hero-wave-divider {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  margin-top: 40px;
+  z-index: 1;
+}
+
+.mod-empresa .hero-wave-divider svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 90px;
+}
+
+/* FOTO ÚNICA */
+.mod-empresa .hero-art {
+  display: flex;
+  justify-content: center;
+}
+
+.mod-empresa .single-photo-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  max-width: 440px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.35s var(--transition-smooth);
+  overflow: hidden;
+}
+
+.mod-empresa .single-photo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(59, 80, 207, 0.3);
+}
+
+.mod-empresa .photo-frame {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--soft);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.mod-empresa .single-img {
+  max-width: 80%;
+  max-height: 220px;
+  object-fit: contain;
+  transition: transform 0.4s var(--transition-smooth);
+}
+
+.mod-empresa .single-photo-card:hover .single-img {
+  transform: scale(1.06) rotate(2deg);
+}
+
+.mod-empresa .photo-caption {
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--soft);
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mod-empresa .hero-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* CONTADORES */
+.mod-empresa .stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.mod-empresa .stat-number {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+}
+
+.mod-empresa .stat-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   BOTONES
+   ========================================================== */
+.mod-empresa .btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mod-empresa .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--transition-smooth);
+}
+
+.mod-empresa .btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+.mod-empresa .btn-color {
+  background: linear-gradient(90deg, var(--blue), var(--magenta));
+  color: var(--white);
+}
+
+.mod-empresa .btn-light {
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.mod-empresa .btn-outline {
+  background: transparent;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+.mod-empresa .btn-outline:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+/* ==========================================================
+   SECCIONES GENERALES Y TARJETAS
+   ========================================================== */
+.mod-empresa .section {
+  padding: 68px 0;
+}
+
+.mod-empresa .section-alt {
+  background-color: var(--soft);
+}
+
+.mod-empresa .kicker {
+  font-size: 11px;
+  color: var(--gray);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.mod-empresa .title-section {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.mod-empresa .grid {
+  display: grid;
+  gap: 20px;
+}
+
+.mod-empresa .grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mod-empresa .grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mod-empresa .card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.35s var(--transition-smooth);
+  position: relative;
+  cursor: pointer;
+}
+
+.mod-empresa .card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(59, 80, 207, 0.3);
+}
+
+.mod-empresa .title-card {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.mod-empresa .card-text {
+  font-size: 14px;
+  color: #5f626b;
+}
+
+.mod-empresa .icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.mod-empresa .card:hover .icon {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.mod-empresa .icon-blue {
+  background: #ebf0ff;
+  color: var(--blue);
+}
+.mod-empresa .icon-orange {
+  background: #fff0e1;
+  color: var(--orange);
+}
+.mod-empresa .icon-green {
+  background: #e8f7e8;
+  color: var(--green);
+}
+.mod-empresa .icon-pink {
+  background: #ffe9fe;
+  color: var(--magenta);
+}
+.mod-empresa .icon-yellow {
+  background: #fffde6;
+  color: #8a7200;
+}
+
+.mod-empresa .badge-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--ink);
+  margin-top: 10px;
+}
+
+/* TABLA FICHA TÉCNICA */
+.mod-empresa .info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.mod-empresa .info-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.mod-empresa .info-table td.label {
+  font-weight: 800;
+  color: var(--blue);
+  width: 30%;
+  background: rgba(59, 80, 207, 0.03);
+}
+
+.mod-empresa .info-table td.value {
+  color: var(--ink);
+}
+
+/* ==========================================================
+   SHOWCASE DE CATEGORÍAS
+   ========================================================== */
+.mod-empresa .showcase-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+.mod-empresa .showcase-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mod-empresa .showcase-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  transition: all 0.3s var(--transition-smooth);
+}
+
+.mod-empresa .showcase-btn:hover,
+.mod-empresa .showcase-btn.active {
+  background: var(--white);
+  border-color: var(--blue);
+  box-shadow: var(--shadow-hover);
+  transform: translateX(6px);
+}
+
+.mod-empresa .showcase-btn.active {
+  border-left: 6px solid var(--orange);
+}
+
+.mod-empresa .showcase-btn i {
+  font-size: 20px;
+  color: var(--blue);
+  width: 30px;
+  text-align: center;
+}
+
+.mod-empresa .showcase-preview-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==========================================================
+   PESTAÑAS (TABS)
+   ========================================================== */
+.mod-empresa .tabs-header {
+  display: inline-flex;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 6px;
+  border-radius: 16px;
+  gap: 6px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.mod-empresa .tab-btn {
+  padding: 10px 22px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mod-empresa .tab-btn.active {
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(59, 80, 207, 0.3);
+}
+
+.mod-empresa .tab-content {
+  display: none;
+  animation: tabFadeIn 0.4s var(--transition-smooth) forwards;
+}
+
+.mod-empresa .tab-content.active {
+  display: block;
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================
+   VENTANA MODAL
+   ========================================================== */
+.mod-empresa .modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 17, 23, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mod-empresa .modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mod-empresa .modal-box {
+  background: var(--white);
+  border-radius: var(--radius);
+  max-width: 500px;
+  width: min(90%, 500px);
+  padding: 32px;
+  position: relative;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.3s var(--transition-smooth);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.mod-empresa .modal-overlay.active .modal-box {
+  transform: translateY(0) scale(1);
+}
+
+.mod-empresa .modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--soft);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+/* ==========================================================
+   ANIMACIONES SCROLL REVEAL Y RESPONSIVE
+   ========================================================== */
+.mod-empresa .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.mod-empresa .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 868px) {
+  .mod-empresa .hero-grid,
+  .mod-empresa .showcase-container,
+  .mod-empresa .grid-2,
+  .mod-empresa .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .mod-empresa .stats-bar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,288 @@
+<section class="mod-publico">
+  <!-- HERO PRINCIPAL -->
+  <div class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <h1 class="title-main">¿A quién está dirigida <span class="gradient-text">Atelier?</span></h1>
+        <p class="lead">
+          Diseñado para personas apasionadas por el arte textil, la cultura de la Selva Central y la libertad de
+          destacar en cada evento o proyecto visual.
+        </p>
+        <div class="btns">
+          <a href="#perfil-demografico" class="btn btn-color">
+            <i class="fa-solid fa-users icon-btn"></i> Perfil Demográfico
+          </a>
+          <a href="#necesidades-estilo" class="btn btn-light">
+            <i class="fa-solid fa-sparkles icon-btn"></i> Necesidades & Estilo
+          </a>
+          <button type="button" class="btn btn-interactive" id="btn-open-quiz">
+            <i class="fa-solid fa-compass icon-btn"></i> Encuentra tu Perfil
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-art reveal">
+        <div class="hero-image-card">
+          <img src="../img/afiche 2.png" alt="Público luciendo trajes de Atelier" class="img-responsive">
+          <div class="hero-badge">
+            <i class="fa-solid fa-camera"></i> Experiencias Únicas
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 1: PERFIL DEMOGRÁFICO Y UBICACIÓN -->
+  <div id="perfil-demografico" class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="kicker"><i class="fa-solid fa-address-card"></i> Segmentación</span>
+          <h2 class="title-section">6. Perfil del Público Objetivo</h2>
+        </div>
+        <p class="section-desc">Identificación clara del usuario al que Atelier atiende en Mazamari y sus alrededores.
+        </p>
+      </div>
+
+      <!-- FILTROS INTERACTIVOS DE AUDIENCIA -->
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" data-filter="all">Todos los Perfiles</button>
+        <button class="filter-tab" data-filter="jovenes">Jóvenes y Estudiantes</button>
+        <button class="filter-tab" data-filter="creadores">Creadores & Fotografía</button>
+        <button class="filter-tab" data-filter="visitantes">Turistas & Locales</button>
+      </div>
+
+      <div class="grid grid-2">
+        <!-- Tarjeta Rango de Edad -->
+        <article class="card card-with-image reveal" data-category="jovenes creadores">
+          <div class="card-image-wrap">
+            <img src="../img/empaque.png" alt="Jóvenes luciendo trajes temáticos" class="card-img">
+            <span class="image-tag"><i class="fa-solid fa-user-group"></i> Edad</span>
+          </div>
+          <div class="card-body">
+            <h3 class="title-card">Rango de Edad</h3>
+            <p class="card-text">
+              <strong>Jóvenes y adultos de 10 años a más</strong> (con supervisión adulta en menores de edad). Un
+              segmento dinámico que abarca desde presentaciones escolares y artísticas hasta creadores de contenido y
+              adultos que buscan atuendos temáticos de alto nivel.
+            </p>
+            <button class="btn-card-more" data-target="modal-edad">
+              Ver detalles de atención <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Tarjeta Ubicación Estratégica -->
+        <article class="card card-with-image reveal" data-category="visitantes">
+          <div class="card-image-wrap">
+            <img src="../img/etiqueta.png" alt="Taller Atelier en Mazamari" class="card-img">
+            <span class="image-tag green"><i class="fa-solid fa-location-dot"></i> Sede</span>
+          </div>
+          <div class="card-body">
+            <h3 class="title-card">Ubicación Estratégica</h3>
+            <p class="card-text">
+              <strong>Mazamari, Satipo, Junín</strong> (Av. Julián Ñaupari s/n). Atendiendo localmente a residentes de
+              la Selva Central, así como a visitantes y turistas que buscan vestuario fotográfico para sus viajes.
+            </p>
+            <button class="btn-card-more" data-target="modal-ubicacion">
+              Ver mapa e itinerarios <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN INTERACTIVA: QUIZ DE AFINIDAD -->
+  <div id="quiz-perfil" class="section quiz-section">
+    <div class="container">
+      <div class="quiz-card reveal">
+        <div class="quiz-header">
+          <span class="kicker"><i class="fa-solid fa-sliders"></i> Asistente Interactivo</span>
+          <h2 class="title-section">Descubre cuál es tu experiencia Atelier ideal</h2>
+          <p class="section-desc">Selecciona tu objetivo principal para adaptar la propuesta a tus necesidades.</p>
+        </div>
+
+        <div class="quiz-options">
+          <button class="quiz-option" data-role="escolar">
+            <div class="option-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <strong>Evento Escolar o Artístico</strong>
+            <p>Trajes temáticos ligeros, cómodos y de ajuste rápido.</p>
+          </button>
+
+          <button class="quiz-option" data-role="fotografia">
+            <div class="option-icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <strong>Sesión Fotográfica / Contenido</strong>
+            <p>Piezas exclusivas de alto impacto visual y detalles con alas articuladas.</p>
+          </button>
+
+          <button class="quiz-option" data-role="turismo">
+            <div class="option-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+            <strong>Turismo & Experiencia Regional</strong>
+            <p>Alquiler rápido para recuerdos fotográficos en la Selva Central.</p>
+          </button>
+        </div>
+
+        <div class="quiz-result" id="quiz-result" style="display: none;">
+          <div class="result-box">
+            <i class="fa-solid fa-circle-check result-icon"></i>
+            <div>
+              <h4 id="result-title">Recomendación Personalizada</h4>
+              <p id="result-desc">Cargando recomendación...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 2: NECESIDADES Y CARACTERÍSTICAS -->
+  <div id="necesidades-estilo" class="section">
+    <div class="container">
+      <div class="grid grid-2 align-center">
+        <!-- Galería / Imagen Destacada -->
+        <div class="reveal">
+          <div class="featured-image-card">
+            <img src="../img/polo.png" alt="Sesión fotográfica con vestuario de Atelier" class="img-responsive">
+            <div class="floating-box">
+              <div class="icon icon-orange"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <div>
+                <strong>Alto Impacto Visual</strong>
+                <p>Prendas ligeras y cómodas para eventos largos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Descripción Necesidades & Características -->
+        <div class="reveal">
+          <span class="kicker"><i class="fa-solid fa-heart"></i> Motivaciones de Compra</span>
+          <h2 class="title-section">Necesidades & Características</h2>
+
+          <div class="info-accordion">
+            <div class="info-block accordion-item active">
+              <div class="info-icon icon-blue"><i class="fa-solid fa-shirt"></i></div>
+              <div class="accordion-content">
+                <div class="accordion-header">
+                  <h3 class="title-card">Necesidades</h3>
+                  <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                </div>
+                <p class="card-text">
+                  Alquilar vestuario temático de alto impacto visual, cómodo y liviano para eventos especiales,
+                  festividades locales o creación de contenido digital y sesiones fotográficas.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-block accordion-item">
+              <div class="info-icon icon-green"><i class="fa-solid fa-leaf"></i></div>
+              <div class="accordion-content">
+                <div class="accordion-header">
+                  <h3 class="title-card">Características Clave</h3>
+                  <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                </div>
+                <p class="card-text">
+                  Personas que valoran el diseño de arte, buscan destacar en eventos especiales y aprecian la naturaleza
+                  de la selva y el ecodiseño.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-block accordion-item">
+              <div class="info-icon icon-pink"><i class="fa-solid fa-gem"></i></div>
+              <div class="accordion-content">
+                <div class="accordion-header">
+                  <h3 class="title-card">Valor Añadido</h3>
+                  <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                </div>
+                <p class="card-text">
+                  Atención personalizada y asesoría estilística integral para asegurar un encaje impecable con la
+                  identidad del usuario.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 3: PERSONALIDAD DE LA EMPRESA & CONEXIÓN -->
+  <div class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="kicker"><i class="fa-solid fa-masks-theater"></i> Identidad Conectada</span>
+          <h2 class="title-section">Personalidad de Atelier ante su Público</h2>
+        </div>
+        <p class="section-desc">Cualidades que generan empatía, fidelización y confianza con nuestros clientes.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card card-interactive reveal" data-trait="creativa">
+          <div class="icon icon-orange"><i class="fa-solid fa-palette icon-xl"></i></div>
+          <h3 class="title-card">Creativa</h3>
+          <p class="card-text">Transforma materiales y conceptos en trajes de fantasía únicos.</p>
+          <span class="card-chip">Explora Diseños</span>
+        </article>
+
+        <article class="card card-interactive reveal" data-trait="profesional">
+          <div class="icon icon-blue"><i class="fa-solid fa-gem icon-xl"></i></div>
+          <h3 class="title-card">Profesional</h3>
+          <p class="card-text">Garantiza acabados impecables, ajuste perfecto y puntualidad.</p>
+          <span class="card-chip">Calidad Garantizada</span>
+        </article>
+
+        <article class="card card-interactive reveal" data-trait="innovadora">
+          <div class="icon icon-green"><i class="fa-solid fa-seedling icon-xl"></i></div>
+          <h3 class="title-card">Innovadora</h3>
+          <p class="card-text">Desarrolla mecanismos livianos como alas articuladas en sus prendas.</p>
+          <span class="card-chip">Mecanismos Articulados</span>
+        </article>
+
+        <article class="card card-interactive reveal" data-trait="artistica">
+          <div class="icon icon-pink"><i class="fa-solid fa-feather icon-xl"></i></div>
+          <h3 class="title-card">Artística</h3>
+          <p class="card-text">Plasma la belleza de la Selva Central en cada detalle textil.</p>
+          <span class="card-chip">Cultura Regional</span>
+        </article>
+
+        <article class="card card-interactive reveal" data-trait="cautivadora">
+          <div class="icon icon-yellow"><i class="fa-solid fa-eye icon-xl"></i></div>
+          <h3 class="title-card">Cautivadora</h3>
+          <p class="card-text">Genera un gran impacto visual que sorprende desde el primer instante.</p>
+          <span class="card-chip">Fotogenia Total</span>
+        </article>
+
+        <article class="card card-interactive reveal" data-trait="acogedora">
+          <div class="icon icon-orange"><i class="fa-solid fa-face-smile icon-xl"></i></div>
+          <h3 class="title-card">Acogedora</h3>
+          <p class="card-text">Brinda un trato cercano, amable y empático a cada cliente.</p>
+          <span class="card-chip">Atención Humana</span>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANNER FINAL -->
+  <div class="banner-image">
+    <div class="banner-overlay">
+      <div class="container reveal">
+        <h2 class="title-banner">Un público que busca una experiencia</h2>
+        <p class="banner-text">La propuesta combina diseño artístico, inspiración en la naturaleza y atención
+          personalizada para ayudar a cada persona a concretar su idea visual.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL INTERACTIVO DE DETALLES -->
+  <div class="mod-modal" id="modal-publico-details">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <div class="modal-body" id="modal-content">
+        <!-- El contenido se inyecta dinámicamente con JS -->
+      </div>
+    </div>
+  </div>
+</section>
